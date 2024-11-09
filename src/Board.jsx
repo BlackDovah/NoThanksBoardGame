@@ -1,74 +1,24 @@
 /* eslint-disable react/prop-types */
-
+import Player from "./Player";
 import "./Board.css";
 
 export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
   const playerColor = ["red", "green", "blue", "yellow"];
-  const currentColor = playerColor[ctx.currentPlayer];
-
-  let winner = "";
-  if (ctx.gameover) {
-    winner = ctx.gameover.message;
-  }
+  const { currentPlayer, gameover } = ctx;
+  const currentColor = playerColor[currentPlayer];
+  const winner = gameover ? gameover.message : "";
 
   return (
     <div className="board">
-      <div className="player player-top">
-        Player0 - Tokens:{G.hand["0"].tokens} - Cards:{G.hand["0"].cards.length}
-        <div className="held-cards">
-          {G.hand["0"].cards.map((card, index) => (
-            <div
-              key={index}
-              className="card"
-              style={{ backgroundColor: playerColor[0] }}
-            >
-              {card}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="player player-right">
-        Player1 - Tokens:{G.hand["1"].tokens} - Cards:{G.hand["1"].cards.length}
-        <div className="held-cards">
-          {G.hand["1"].cards.map((card, index) => (
-            <div
-              key={index}
-              className="card"
-              style={{ backgroundColor: playerColor[1] }}
-            >
-              {card}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="player player-bottom">
-        Player2 - Tokens:{G.hand["2"].tokens} - Cards:{G.hand["2"].cards.length}
-        <div className="held-cards">
-          {G.hand["2"].cards.map((card, index) => (
-            <div
-              key={index}
-              className="card"
-              style={{ backgroundColor: playerColor[2] }}
-            >
-              {card}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="player player-left">
-        Player3 - Tokens:{G.hand["3"].tokens} - Cards:{G.hand["3"].cards.length}
-        <div className="held-cards">
-          {G.hand["3"].cards.map((card, index) => (
-            <div
-              key={index}
-              className="card"
-              style={{ backgroundColor: playerColor[3] }}
-            >
-              {card}
-            </div>
-          ))}
-        </div>
-      </div>
+      {[0, 1, 2, 3].map((playerID) => (
+        <Player
+          key={playerID}
+          playerID={playerID}
+          tokens={G.hand[playerID.toString()].tokens}
+          cards={G.hand[playerID.toString()].cards}
+          color={playerColor[playerID]}
+        />
+      ))}
       <div className="card-container">
         <div className="deck" style={{ backgroundColor: currentColor }}>
           NoThanks
@@ -81,12 +31,14 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
         <button
           className="place-token-and-pass"
           onClick={moves.placeTokenAndPass}
+          aria-label="place-token-and-pass"
         >
           No Thanks!
         </button>
         <button
           className="take-card-and-tokens"
           onClick={moves.takeCardAndTokens}
+          aria-label="take-card-and-tokens"
         >
           Take the card and tokens
         </button>
@@ -94,7 +46,11 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
       {ctx.gameover && (
         <div className="gameover">
           <div className="winner">{winner} </div>
-          <button className="new-game" onClick={reset}>
+          <button
+            className="new-game"
+            onClick={reset}
+            aria-label="create-new-game"
+          >
             Start new game
           </button>
         </div>
