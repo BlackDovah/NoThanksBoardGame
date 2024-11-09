@@ -1,6 +1,6 @@
 import { TurnOrder } from 'boardgame.io/core';
 
-function initializeDeck() {
+const initializeDeck =() =>{
     const deck = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35];
     // Shuffle the array
@@ -54,9 +54,7 @@ function findSmallestInSequences(cards) {
     return smallestInEachSequence;
 };
 
-// // Initialize the deck with 23 cards and shuffle them.
-const initialDeck = initializeDeck();
-
+// // Initialize the deck with 24 cards and shuffle them.
 const endGameCalculations = ({ G, ctx }) => {
     const playerScore = [];
     if (G.deck.length === 0) {
@@ -102,11 +100,12 @@ function createHands(numPlayers) {
 
 export const NoThanks = {
     setup: () => ({
-        deck: initialDeck,
+        deck: initializeDeck(),
         hand: createHands(4),
         ground: {
             groundTokens: Number(0),
-            currentCard: initialDeck[0]
+            currentCard: initializeDeck()[0]
+
         }
     }),
 

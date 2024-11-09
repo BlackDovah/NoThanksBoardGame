@@ -1,13 +1,12 @@
 /* eslint-disable react/prop-types */
 import { Player } from "./components/Player";
 import "./Board.css";
-
 export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
   const playerColor = ["red", "green", "blue", "yellow"];
   const { currentPlayer, gameover } = ctx;
   const currentColor = playerColor[currentPlayer];
   const winner = gameover ? gameover.message : "";
-
+  
   return (
     <div className="board">
       {[0, 1, 2, 3].map((playerID) => (
