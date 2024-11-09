@@ -5,5 +5,3 @@ export const Card = ({ card, color }) => (
       {card}
     </div>
   );
-
-export default Card;

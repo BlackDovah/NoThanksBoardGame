@@ -20,14 +20,14 @@
   position: relative;
 }
 
-.player-top {
+.player-0 {
   background-color: red;
   color: black;
   font-weight: bold;
   grid-area: 1 / 2;
 }
 
-.player-right {
+.player-1 {
   background-color: green;
   color: black;
   font-weight: bold;
@@ -36,14 +36,14 @@
   transform: rotate(90deg);
 }
 
-.player-bottom {
+.player-2 {
   background-color: blue;
   color: black;
   font-weight: bold;
   grid-area: 4 / 2;
 }
 
-.player-left {
+.player-3 {
   background-color: yellow;
   color: black;
   font-weight: bold;

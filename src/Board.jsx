@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Player from "./Player";
+import { Player } from "./components/Player";
 import "./Board.css";
 
 export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
