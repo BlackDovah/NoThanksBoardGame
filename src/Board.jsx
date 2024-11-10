@@ -10,9 +10,9 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
   const winner = gameover ? gameover.message : "";
 
   return (
-    <div className="board">
+    <div className="board bg-gray-800">
       <div className="col-start-1 row-start-1 justify-self-start self-start">
-        <div className="text-6xl bg-red-600 rounded-full p-6">
+        <div className="text-6xl bg-red-600 border-white border-2 rounded-full p-6">
           NoThanks!<br></br> The Play Or Pay Card Game
         </div>
       </div>
@@ -25,13 +25,8 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
           color={playerColor[playerID]}
         />
       ))}
-      <Ground 
-      G = {G}
-      currentColor={currentColor}
-      />
-      <Moves 
-      moves={moves}
-      />
+      <Ground G={G} currentColor={currentColor} />
+      <Moves moves={moves} />
       {ctx.gameover && (
         <div className="gameover">
           <div className="winner">{winner} </div>
