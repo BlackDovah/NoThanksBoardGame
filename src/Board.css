@@ -1,3 +1,8 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .board {
   display: grid;
   height: 100vh;
@@ -107,8 +112,8 @@
 
 .deck {
   left: 0;
-  width: 80px;
-  height: 120px;
+  width: 100px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,8 +123,8 @@
 
 .drawnCard {
   left: 120px;
-  width: 80px;
-  height: 120px;
+  width: 100px;
+  height: 160px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -161,6 +166,12 @@
 .take-card-and-tokens:active {
   background-color: darkgray;
   color: black;
+}
+
+.place-token-and-pass:focus,
+.take-card-and-tokens:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .player:hover .held-cards {
