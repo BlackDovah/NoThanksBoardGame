@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "tail": "tailwindcss -i ~/Documents/GitHub/boardgame/NoThanksBoardGame/src/Board.css -o ~/Documents/GitHub/boardgame/NoThanksBoardGame/src/output.css --watch"
+    "tail": "tailwindcss -i ~/Documents/GitHub/boardgame/NoThanksBoardGame/src/Board.css -o ~/Documents/GitHub/boardgame/NoThanksBoardGame/src/output.css --watch",
+    "serve": "node src/server.js"
   },
   "dependencies": {
     "@mantine/core": "^7.13.4",

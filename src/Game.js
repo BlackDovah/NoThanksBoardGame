@@ -1,4 +1,5 @@
-import { TurnOrder } from 'boardgame.io/core';
+// const { TurnOrder } = require('boardgame.io/core');
+import { TurnOrder } from 'boardgame.io/dist/cjs/core.js';
 
 const initializeDeck =() =>{
     const deck = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
@@ -123,3 +124,5 @@ export const NoThanks = {
 
     endIf: endGameCalculations,
 };
+
+// module.exports = { NoThanks };
