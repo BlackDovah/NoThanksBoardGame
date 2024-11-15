@@ -1,5 +1,6 @@
 {
   "name": "nothanksboardgame",
+  "proxy": "http://localhost:5000",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,6 +16,7 @@
     "@mantine/core": "^7.13.4",
     "@mantine/hooks": "^7.13.4",
     "boardgame.io": "^0.50.2",
+    "express": "^4.21.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
