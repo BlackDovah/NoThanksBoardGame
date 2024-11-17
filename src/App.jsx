@@ -5,11 +5,14 @@ import { NoThanksBoard } from "./Board";
 import { SocketIO } from "boardgame.io/multiplayer";
 import "./output.css";
 
+const { protocol, hostname, port } = window.location;
+const server = `${protocol}//${hostname}:${port}`;
+
 const NoThanksClient = Client({
   game: NoThanks,
   numPlayers: 4,
   board: NoThanksBoard,
-  multiplayer: SocketIO({ server: "localhost:8000" }),
+  multiplayer: SocketIO({ server }),
 });
 
 class App extends React.Component {

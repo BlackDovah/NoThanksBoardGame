@@ -4,13 +4,11 @@ import { TurnOrder } from 'boardgame.io/dist/cjs/core.js';
 const initializeDeck =() =>{
     const deck = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35];
-    // Shuffle the array
     for (let i = deck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [deck[i], deck[j]] = [deck[j], deck[i]]; // Swap elements
+        [deck[i], deck[j]] = [deck[j], deck[i]]; 
     }
 
-    // Return the first `size` elements
     return deck.slice(0, 24);
 };
 
@@ -29,33 +27,27 @@ const takeCardAndTokens = ({ G, playerID }) => {
 };
 
 function findSmallestInSequences(cards) {
-    // Step 1: Sort the array in ascending order
     const sortedCards = cards.slice().sort((a, b) => a - b);
 
-    const sequences = [];  // Array to store all consecutive sequences
-    let currentSequence = [sortedCards[0]]; // Start with the first card
+    const sequences = [];  
+    let currentSequence = [sortedCards[0]]; 
 
-    // Step 2: Find consecutive sequences
     for (let i = 1; i < sortedCards.length; i++) {
         if (sortedCards[i] === sortedCards[i - 1] + 1) {
-            // If the current card is consecutive, add it to the current sequence
             currentSequence.push(sortedCards[i]);
         } else {
-            // If not consecutive, store the current sequence and start a new one
             sequences.push(currentSequence);
             currentSequence = [sortedCards[i]];
         }
     }
-    // Don't forget to push the last sequence found
     sequences.push(currentSequence);
 
-    // Step 3: Return the smallest number from each sequence
     const smallestInEachSequence = sequences.map(sequence => sequence[0]);
 
     return smallestInEachSequence;
 };
 
-// // Initialize the deck with 24 cards and shuffle them.
+// Initialize the deck with 24 cards and shuffle them.
 const endGameCalculations = ({ G, ctx }) => {
     const playerScore = [];
     if (G.deck.length === 0) {
