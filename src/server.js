@@ -1,5 +1,6 @@
 import { Server, Origins } from 'boardgame.io/dist/cjs/server.js';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import serve from 'koa-static';
 import { NoThanks } from './Game.js';
 
@@ -11,6 +12,9 @@ const server = Server({
 });
 
 const PORT = process.env.PORT || 8000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const frontEndAppBuildPath = path.resolve(__dirname, './dist');
 // server.app.use(serve(frontEndAppBuildPath))
