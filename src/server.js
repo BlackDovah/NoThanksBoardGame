@@ -2,6 +2,7 @@ import { Server, Origins } from 'boardgame.io/dist/cjs/server.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import serve from 'koa-static';
+import cors from '@koa/cors';
 import { NoThanks } from './Game.js';
 
 const server = Server({
@@ -10,6 +11,11 @@ const server = Server({
     Origins.LOCALHOST_IN_DEVELOPMENT, "https://no-thanks-board-game.vercel.app/"
   ],
 });
+
+server.app.use(cors({
+  origin: ['http://localhost:5173', 'https://no-thanks-board-game.vercel.app'],
+  credentials: true,
+}));
 
 const PORT = process.env.PORT || 8000;
 
