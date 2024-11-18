@@ -3,7 +3,7 @@ import { Card } from "./Card";
 
 export const Player = ({ playerID, tokens, cards, color }) => {
   return (
-      <div className={`player-${playerID} border-white flex items-center justify-center border-2 text-lg relative p-4 rounded-lg`}>
+      <div className={`player-${playerID} bg-gray-800 border-white flex items-center justify-center border-2 text-lg relative p-4 rounded-lg`}>
         <div className="text-center xsm:text-xs">
           Player{playerID}&nbsp;-&nbsp;Tokens:&nbsp;{tokens}&nbsp;-&nbsp;Cards:&nbsp;{cards.length}
         </div>

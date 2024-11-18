@@ -2,7 +2,7 @@
 
 export const Card = ({ card, color }) => {
   return (
-    <div className="card xsm:text-xs" style={{ backgroundColor: color }}>
+    <div className="card xsm:text-xs bg-gray-800" style={{ backgroundColor: color }}>
       {card}
     </div>
   );
