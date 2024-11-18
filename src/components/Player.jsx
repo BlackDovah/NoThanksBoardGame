@@ -3,13 +3,15 @@ import { Card } from "./Card";
 
 export const Player = ({ playerID, tokens, cards, color }) => {
   return (
-    <div className={`player player-${playerID} border-white border-2`}>
-      Player{playerID} - Tokens: {tokens} - Cards: {cards.length}
-      <div className="held-cards">
-        {cards.map((card, index) => (
-          <Card key={index} card={card} color={color} />
-        ))}
+      <div className={`player-${playerID} border-white flex items-center justify-center border-2 text-lg relative p-4 rounded-lg`}>
+        <div className="text-center xsm:text-xs">
+          Player{playerID}&nbsp;-&nbsp;Tokens:&nbsp;{tokens}&nbsp;-&nbsp;Cards:&nbsp;{cards.length}
+        </div>
+        <div className="held-cards">
+          {cards.map((card, index) => (
+            <Card key={index} card={card} color={color} />
+          ))}
+        </div>
       </div>
-    </div>
   );
 };

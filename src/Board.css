@@ -1,29 +1,14 @@
-/* index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .board {
   display: grid;
   height: 100vh;
   width: 100vw;
   grid-template-rows: 1fr auto auto 1fr;
   grid-template-columns: 1fr auto 1fr;
-  gap: 10px;
   align-items: center;
   justify-items: center;
 }
 
 /* Players display styling */
-.player {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  position: relative;
-}
 
 .player-0 {
   background-color: red;
@@ -112,35 +97,22 @@
 
 .deck {
   left: 0;
-  width: 100px;
-  height: 160px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 8px;
   box-shadow: 4px 4px 6px rgba(255, 255, 255, 0.1);
 }
 
 .drawnCard {
   left: 120px;
-  width: 100px;
-  height: 160px;
   border-radius: 8px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 4px 4px 6px rgba(255, 255, 255, 0.1);
 }
 
 /* Buttons styling */
 .button-container {
-  margin-top: 60px;
-  gap: 10px;
   grid-area: 3/2;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .place-token-and-pass {

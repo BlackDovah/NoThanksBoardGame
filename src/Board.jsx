@@ -3,6 +3,7 @@ import { Player } from "./components/Player";
 import { Ground } from "./components/Ground";
 import { Moves } from "./components/Moves";
 import "./output.css";
+import "./Board.css";
 export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
   const playerColor = ["red", "green", "blue", "yellow"];
   const { currentPlayer, gameover } = ctx;
@@ -10,11 +11,11 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
   const winner = gameover ? gameover.message : "";
 
   return (
-    <div className="board bg-gray-800">
-      <div className="col-start-1 row-start-1 justify-self-start self-start">
-        <div className="text-6xl bg-red-600 border-white border-2 rounded-full p-6">
-          NoThanks!<br></br> The Play Or Pay Card Game
-        </div>
+    <div className="board bg-gray-800 grid grid-cols-3 gap-4">
+      <div className="col-start-1 row-start-1 justify-self-start self-start
+       2xl:text-4xl md:text-3xl sm:text-2xl xsm:text-sm py-10 pl-10 pr-6 bg-red-600 
+       border-white border-2 rounded-full">
+        NoThanks!<br></br> The Play Or Pay Card Game
       </div>
       {[0, 1, 2, 3].map((playerID) => (
         <Player

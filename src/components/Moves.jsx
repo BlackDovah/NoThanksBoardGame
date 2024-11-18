@@ -2,7 +2,7 @@
 
 export const Moves = ({ moves }) => {
   return (
-    <div className="button-container">
+    <div className="flex col-start-2 row-start-3 md:gap-10 mt-32 items-center justify-between xsm:text-xs">
       <button
         className="place-token-and-pass border-white bg-black p-3"
         onClick={moves.placeTokenAndPass}
