@@ -7,7 +7,7 @@ import { NoThanks } from './Game.js';
 const server = Server({
   games: [NoThanks],
   origins: [
-    Origins.LOCALHOST_IN_DEVELOPMENT, "https://enchanting-kashata-82a638.netlify.app"
+    Origins.LOCALHOST_IN_DEVELOPMENT, "https://no-thanks-board-game.vercel.app/"
   ],
 });
 
