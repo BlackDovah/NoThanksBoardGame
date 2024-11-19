@@ -12,11 +12,20 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
 
   return (
     <div className="board bg-gray-800 grid grid-cols-3 gap-4">
-      <div className="col-start-1 row-start-1 justify-self-start self-start
+      <div
+        className="col-start-1 row-start-1 justify-self-start self-start
        2xl:text-4xl md:text-3xl sm:text-2xl xsm:text-sm py-10 pl-10 pr-6 bg-red-600 
-       border-white border-2 rounded-full">
+       border-white border-2 rounded-full"
+      >
         NoThanks!<br></br> The Play Or Pay Card Game
       </div>
+      <a
+        href="https://www.amigo.games/wp-content/uploads/2024/08/18414-014-NoThanks-Manual_001-LAYOUT.pdf"
+        target="_blank"
+        className="col-start-1 row-start-2 justify-self-start self-start"
+      >
+        Click here for the instructions
+      </a>
       {[0, 1, 2, 3].map((playerID) => (
         <Player
           key={playerID}
