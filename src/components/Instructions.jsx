@@ -32,7 +32,6 @@ export const Instructions = () => {
       <h1 className="text-xl">
         <strong>Game Rules!</strong>
       </h1>
-      <br></br>
       <ol>
         <li>
           <strong>1-</strong>Players take turns deciding whether to take the
