@@ -6,7 +6,7 @@ export const Instructions = () => {
 
   useEffect(() => {
     const handleReload = () => {
-      navigate("/");
+      navigate("/instructions");
     };
 
     // Add event listener for page reload
