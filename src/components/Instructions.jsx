@@ -56,10 +56,12 @@ export const Instructions = () => {
       </h1>
       <ol>
         <strong>1-</strong>At the end of the game, the values of your cards will
-        be added together, and your remaining tokens will be subtracted from the
+        be added together.
+        <br></br>
+        <strong>2-</strong>Your remaining tokens will be subtracted from the
         total score.
         <br></br>
-        <strong>2-</strong>For cards that are in series, e.g: 30, 31, 32, only
+        <strong>3-</strong>For cards that are in series, e.g: 30, 31, 32, only
         the first card in the series will be added to the total score when
         adding the card values together.
       </ol>
