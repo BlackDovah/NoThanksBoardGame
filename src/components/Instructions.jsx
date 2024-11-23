@@ -23,15 +23,15 @@ export const Instructions = () => {
     rounded-lg text-black"
     >
       <h1 className="text-center text-xl">
-        <strong>Game Rules!</strong>
-      </h1>
-      <br></br>
-      <h1 className="text-center text-xl">
         <strong>Game Objective</strong>
       </h1>
       <p className="text-center">
         Have the lowest score at the end of the game.
       </p>
+      <br></br>
+      <h1 className="text-xl">
+        <strong>Game Rules!</strong>
+      </h1>
       <br></br>
       <ol>
         <li>
