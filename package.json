@@ -1,7 +1,7 @@
 {
   "name": "nothanksboardgame",
   "proxy": "http://localhost:5000",
-  "homepage": "/no-thanks-board-game",
+  "homepage": "https://no-thanks-board-game.vercel.app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
