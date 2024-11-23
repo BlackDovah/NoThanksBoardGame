@@ -20,8 +20,8 @@ export const Instructions = () => {
 
   return (
     <div
-      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 
-    -translate-y-1/2 text-center bg-green-400 border-white border-8 p-8 
+      className="xl:absolute xl:top-1/2 xl:left-1/2 xl:transform xl:-translate-x-1/2 
+    xl:-translate-y-1/2 text-center bg-green-400 border-white border-8 p-8 
     rounded-lg text-black"
     >
       <Link to="/">
@@ -30,13 +30,13 @@ export const Instructions = () => {
         </button>
       </Link>
       <h1 className="text-xl">
-        <strong>How to Play No Thanks</strong>
+        <strong>Game Objective</strong>
       </h1>
       <p>
-        <strong>Your Objective: </strong>Avoid points by strategically declining
-        cards. The player with the fewest points wins.
+        Have the lowest score at the end of the game.
       </p>
-      <ol>
+      <br></br>
+      <ol className="text-start">
         <li>
           <strong>1-</strong>Players take turns deciding whether to take the
           card or pass.
@@ -52,18 +52,27 @@ export const Instructions = () => {
           <strong>3-</strong>If you take the card, you collect all tokens on it.
         </li>
         <li>
-          <strong>4-</strong>If you take cards with consecutive numbers, only
-          the lowest number in the series will count against you.
-          <br></br>A series can be made up of as few as two cards.
-        </li>
-        <li>
-          <strong>5-</strong>The game ends when all cards have been taken.
+          <strong>4-</strong>The game ends when all cards have been taken.
         </li>
       </ol>
+      <br></br>
+      <h1>
+        <strong>Score Calculation</strong>
+      </h1>
+      <ol className="text-start">
+        <strong>1-</strong>At the end of the game, the values of your cards will
+        be added together, and your remaining tokens will be subtracted from the
+        total score.
+        <br></br>
+        <strong>2-</strong>For cards that are in series, e.g: 30, 31, 32, only
+        the first card in the series will be added to the total score when
+        adding the card values together.
+      </ol>
+      <br></br>
       <h1 className="text-xl">
         <strong>Tips</strong>
       </h1>
-      <ol>
+      <ol className="text-start">
         <li>
           <strong>1-</strong>It’s a good idea to try to hold onto tokens – they
           help your score at the end of the game and they keep you from taking
@@ -83,19 +92,9 @@ export const Instructions = () => {
           out.
         </li>
       </ol>
-      <h1>
-        <strong>End game calculations</strong>
-      </h1>
+      <br></br>
       <p>
-        At the end of the game, the values of your cards will be added together,
-        and your remaining tokens will be subtracted from the total score.
-        <br></br>
-        For cards that are in series, e.g: 30, 31, 32, only the first card in
-        the series will be added to the total score when adding the card values
-        together.
-      </p>
-      <p>
-        <strong>Good luck and have fun!</strong>
+        <strong>And remember, DON'T LOSE 0_0!</strong>
       </p>
       <Link to="/">
         <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
