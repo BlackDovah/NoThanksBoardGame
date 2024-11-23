@@ -9,10 +9,8 @@ export const Instructions = () => {
       navigate("/instructions");
     };
 
-    // Add event listener for page reload
     window.addEventListener("load", handleReload);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener("load", handleReload);
     };
@@ -24,6 +22,10 @@ export const Instructions = () => {
     xl:-translate-y-1/2 text-start bg-green-400 border-white border-8 p-8 
     rounded-lg text-black"
     >
+      <h1 className="text-center text-xl">
+        <strong>Game Rules!</strong>
+      </h1>
+      <br></br>
       <h1 className="text-center text-xl">
         <strong>Game Objective</strong>
       </h1>
