@@ -1,8 +1,29 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Instructions = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleReload = () => {
+      navigate("/");
+    };
+
+    // Add event listener for page reload
+    window.addEventListener("load", handleReload);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("load", handleReload);
+    };
+  }, [navigate]);
+
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-green-400 border-white border-8 p-8 rounded-lg text-black font-bold text-shadow-custom">
+    <div
+      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 
+    -translate-y-1/2 text-center bg-green-400 border-white border-8 p-8 
+    rounded-lg text-black font-bold text-shadow-custom"
+    >
       <h1>How to Play No Thanks</h1>
       <p>
         <strong>Objective:</strong> Avoid points by strategically declining
