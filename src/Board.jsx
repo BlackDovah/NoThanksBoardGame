@@ -2,6 +2,7 @@
 import { Player } from "./components/Player";
 import { Ground } from "./components/Ground";
 import { Moves } from "./components/Moves";
+import { Link } from "react-router-dom";
 import "./output.css";
 import "./Board.css";
 export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
@@ -17,15 +18,17 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
        2xl:text-4xl md:text-3xl sm:text-2xl xsm:text-sm py-10 pl-10 pr-6 bg-red-600 
        border-white border-2 rounded-full"
       >
-        NoThanks!<br></br> The Play Or Pay Card Game
+        NoThanks!<br></br>The Play Or Pay Card Game
       </div>
-      <a
-        href="https://www.amigo.games/wp-content/uploads/2024/08/18414-014-NoThanks-Manual_001-LAYOUT.pdf"
-        target="_blank"
-        className="col-start-1 row-start-2 justify-self-start self-start"
+      <Link
+        to="/instructions"
+        className="col-start-2 row-start-1 
+      justify-self-center self-start xsm:text-xs bg-green-400 
+       border-2 text-lg relative p-4 rounded-lg
+       text-black font-bold text-shadow-custom"
       >
-        Click here for the instructions
-      </a>
+        How To Play
+      </Link>
       {[0, 1, 2, 3].map((playerID) => (
         <Player
           key={playerID}

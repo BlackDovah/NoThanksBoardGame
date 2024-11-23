@@ -1,7 +1,9 @@
 // import React from "react";
 import { Client } from "boardgame.io/react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { NoThanks } from "./Game.js";
 import { NoThanksBoard } from "./Board";
+import { Instructions } from "./components/Instructions"; 
 // import { SocketIO } from "boardgame.io/multiplayer";
 import "./output.css";
 
@@ -60,4 +62,15 @@ const NoThanksClient = Client({
 //   }
 // }
 
-export default NoThanksClient;
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<NoThanksClient />} />
+        <Route path="/instructions" element={<Instructions />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

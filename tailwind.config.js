@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import textShadowPlugin from 'tailwindcss-textshadow';
+
 export default {
   content: [
     "./index.html",
@@ -10,8 +13,13 @@ export default {
         'xsm': '412px',
         // => @media (min-width: 412px) { ... }
       },
+      textShadow: {
+        'custom': '1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    textShadowPlugin
+  ],
 }
 
