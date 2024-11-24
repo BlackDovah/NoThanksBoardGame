@@ -30,7 +30,7 @@ export const Instructions = () => {
       </p>
       <br></br>
       <h1 className="text-xl">
-        <strong>Game Rules!</strong>
+        <strong>Game Rules</strong>
       </h1>
       <ol>
         <li>
