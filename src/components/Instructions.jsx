@@ -92,7 +92,7 @@ export const Instructions = () => {
       </ol>
       <br></br>
       <p className="text-center">
-        <strong>And remember, DON'T LOSE 0_0!</strong>
+        <strong>And remember, DON&apos;T LOSE 0_0!</strong>
       </p>
       <div className="text-center">
         <Link to="/">
