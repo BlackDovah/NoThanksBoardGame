@@ -5,14 +5,18 @@ import { Moves } from "./components/Moves";
 import { Link } from "react-router-dom";
 import "./output.css";
 import "./Board.css";
-export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
+export const NoThanksBoard = ({ G, ctx, moves }) => {
   const playerColor = ["red", "green", "blue", "yellow"];
   const { currentPlayer, gameover } = ctx;
   const currentColor = playerColor[currentPlayer];
   const winner = gameover ? gameover.message : "";
 
+  const handleReload = () => {
+    window.location.reload();
+  };
+
   return (
-    <div className="board bg-gray-800 grid grid-cols-3 gap-4">
+    <div className="board min-h-screen bg-gray-800 grid grid-cols-3 gap-4">
       <div
         className="col-start-1 row-start-1 justify-self-start self-start
        2xl:text-4xl md:text-3xl sm:text-2xl xsm:text-sm py-10 pl-10 pr-6 bg-red-600 
@@ -45,7 +49,7 @@ export const NoThanksBoard = ({ G, ctx, moves, reset }) => {
           <div className="winner">{winner} </div>
           <button
             className="new-game"
-            onClick={reset}
+            onClick={handleReload}
             aria-label="create-new-game"
           >
             Start new game
