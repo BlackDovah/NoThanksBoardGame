@@ -16,7 +16,11 @@ export const NoThanksBoard = ({ G, ctx, moves }) => {
   };
 
   return (
-    <div className="grid xsm:h-screen xsm:w-screen grid-rows-3 grid-cols-[1fr_auto_1fr] items-center justify-items-center bg-gray-800 gap-4">
+    <div
+      className="grid xsm:h-screen xsm:w-screen grid-rows-[1fr_auto_auto_1fr] 
+    grid-cols-[1fr_auto_1fr] items-center justify-items-center 
+    bg-gray-800 gap-4"
+    >
       <div
         className="col-start-1 row-start-1 justify-self-start self-start
        2xl:text-4xl md:text-3xl sm:text-2xl xsm:text-sm py-10 pl-10 pr-6 bg-red-600 

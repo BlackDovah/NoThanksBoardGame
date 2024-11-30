@@ -841,6 +841,10 @@ video {
     width: 100vw;
   }
 
+  .xsm\:grid-rows-\[1fr_auto_auto_1fr\] {
+    grid-template-rows: 1fr auto auto 1fr;
+  }
+
   .xsm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
